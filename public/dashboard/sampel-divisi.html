@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Menarra Finance Dashboard Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Bootstrap, Chart JS"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rachma | @rachmadzii" />
+
+    <title>SPIP Peruri - Dashboard</title>
+
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/css/styles.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <!-- CDN Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/32f82e1dca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Nav Sidebar -->
+
+   
+    <nav
+    class="sidebar offcanvas-md offcanvas-start"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+  >
+  
+    <div class="d-flex justify-content-end m-3 d-block d-md-none">
+      <button
+        aria-label="Close"
+        data-bs-dismiss="offcanvas"
+        data-bs-target=".sidebar"
+        class="btn p-0 border-0 fs-4"
+      >
+        <i class="fas fa-close"></i>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center mt-md-5 mb-5">
+      <img
+        src="assets/images/peruri-logo.png"
+        alt="Logo"
+        width="140px"
+        height="40px"
+      />
+    </div>
+    
+      <div class="pt-2 d-flex flex-column gap-5">
+
+        
+          <div class="menu p-0">
+            <p>Main Menu </p>
+            <ul class="list-unstyled mb-4">
+              <li>
+                <a href="#" class="item-menu">
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+          
+                  Metodologi SPIP
+                </a>
+              </li>
+              <li>
+                <a href="#assesMenu " data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">
+          
+                  Asessment SPIP
+                </a>
+                <ul class="collapse list-unstyled" id="assesMenu">
+                  <li>
+                      <a href="#assesMenu2" class="item-menu" data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">Menu All Divisi</a>
+                      <ul class="collapse list-unstyled" id="assesMenu2">
+                        <li>
+                          <a href="" class="item-menu">Kuesioner</a>
+                        </li>
+                        <li>
+                          <a href="" class="item-menu">Status</a>
+                        </li>
+                        <li>
+                          <a href="" class="item-menu">Skor Card</a>
+                        </li>
+                      </ul>
+                  </li>
+                  
+                </ul>
+              </li>
+              
+              
+              <li>
+              <li>
+                <a href="#" class="item-menu active">
+              
+                  Surat Tugas 
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Sampel Divisi
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Entry Meet
+                </a>
+              </li>
+              <li>
+                <a href="#kuesioner" data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">
+              
+                  Internal Control Quisioner
+                </a>
+                <ul class="collapse list-unstyled" id="kuesioner">
+                  <li>
+                    <a href="#" class="item-menu">Lembar</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Upload Data</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Permintaan Dokumen</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Expose Meet & Exit Meet</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Laporan
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+      
+      </div>
+
+    
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div>
+            <button
+              class="sidebarCollapseDefault btn p-0 border-0 d-none d-md-block"
+              aria-label="Hamburger Button"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target=".sidebar"
+              aria-controls="sidebar"
+              aria-label="Hamburger Button"
+              class="sidebarCollapseMobile btn p-0 border-0 d-block d-md-none"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            Hallo , Muhammad Dikky Purwanto  
+            <img
+              src="assets/images/avatar.jpg"
+              alt="Photo Profile"
+              class="avatar"
+            />
+          </div>
+        </div>
+      </nav>
+      <section class="p-3">
+        <header>
+          <h3>Sampel Divisi</h3>
+          <p>Manage data sampel divisi anda</p>
+        </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover-scroll-horizontal-vertical w-100">
+                            <thead>
+                                <tr>
+                                    
+                                    <th class="text-center">No</th>
+                                    <th class="text-center">Komponen</th>
+                                    <th class="text-center">Bobot </th>
+                                    <th class="text-center">Nilai</th>
+                                    <th class="text-center">Capaian</th>
+                                    <th class="text-center">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+
+          
+        </div>
+        
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="assets/js/donut_chart.js"></script>
+    <script src="assets/js/line_chart.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.sidebarCollapseDefault').on('click', function () {
+          $('.sidebar').toggleClass('active');
+          $('.content').toggleClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>

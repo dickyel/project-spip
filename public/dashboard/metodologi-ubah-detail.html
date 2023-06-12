@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Menarra Finance Dashboard Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Bootstrap, Chart JS"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rachma | @rachmadzii" />
+
+    <title>SPIP Peruri - Dashboard</title>
+
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/css/styles.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <!-- CDN Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/32f82e1dca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Nav Sidebar -->
+
+   
+    <nav
+    class="sidebar offcanvas-md offcanvas-start"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+  >
+  
+    <div class="d-flex justify-content-end m-3 d-block d-md-none">
+      <button
+        aria-label="Close"
+        data-bs-dismiss="offcanvas"
+        data-bs-target=".sidebar"
+        class="btn p-0 border-0 fs-4"
+      >
+        <i class="fas fa-close"></i>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center mt-md-5 mb-5">
+      <img
+        src="assets/images/peruri-logo.png"
+        alt="Logo"
+        width="140px"
+        height="40px"
+      />
+    </div>
+    
+      <div class="pt-2 d-flex flex-column gap-5">
+
+        
+          <div class="menu p-0">
+            <p>Main Menu </p>
+            <ul class="list-unstyled mb-4">
+              <li>
+                <a href="#" class="item-menu ">
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu active">
+          
+                  Metodologi SPIP
+                </a>
+              </li>
+              <li>
+                <a href="#assesMenu " data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">
+          
+                  Asessment SPIP
+                </a>
+                <ul class="collapse list-unstyled" id="assesMenu">
+                  <li>
+                      <a href="#assesMenu2" class="item-menu" data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">Menu All Divisi</a>
+                      <ul class="collapse list-unstyled" id="assesMenu2">
+                        <li>
+                          <a href="" class="item-menu">Kuesioner</a>
+                        </li>
+                        <li>
+                          <a href="" class="item-menu">Status</a>
+                        </li>
+                        <li>
+                          <a href="" class="item-menu">Skor Card</a>
+                        </li>
+                      </ul>
+                  </li>
+                  
+                </ul>
+              </li>
+              
+              
+              <li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Surat Tugas 
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Sampel Divisi
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Entry Meet
+                </a>
+              </li>
+              <li>
+                <a href="#kuesioner" data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">
+              
+                  Internal Control Quisioner
+                </a>
+                <ul class="collapse list-unstyled" id="kuesioner">
+                  <li>
+                    <a href="#" class="item-menu">Lembar</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Upload Data</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Permintaan Dokumen</a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-menu">Expose Meet & Exit Meet</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="item-menu">
+              
+                  Laporan
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+      
+      </div>
+
+    
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div>
+            <button
+              class="sidebarCollapseDefault btn p-0 border-0 d-none d-md-block"
+              aria-label="Hamburger Button"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target=".sidebar"
+              aria-controls="sidebar"
+              aria-label="Hamburger Button"
+              class="sidebarCollapseMobile btn p-0 border-0 d-block d-md-none"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center justify-content-end gap-4">
+            Hallo , Muhammad Dikky Purwanto  
+            <img
+              src="assets/images/avatar.jpg"
+              alt="Photo Profile"
+              class="avatar"
+            />
+          </div>
+        </div>
+      </nav>
+      <section class="p-2">
+        <header>
+          <h3>Metodologi SPIP</h3>
+          <p>Manage data Metodologi SPIP</p>
+        </header>
+        
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Metodologi SPIP</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pedoman SPIP</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Grafik / Tabel SPIP</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">Lain - lain</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="metodologi.html" style="text-decoration: none; color:#000;">Metodologi Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Ubah Metodologi</li>
+                        </ol>
+                      </nav>
+                      <form>
+                        <div class="mb-3">
+                          <label for="judul" class="form-label">Judul </label>
+                          <input type="text" class="form-control" id="judul" aria-describedby="judul">
+                          
+                        </div>
+                        <div class="mb-3">
+
+                          <label for="">Deskripsi</label>
+                          <textarea class="form-control" placeholder="Masukkan deskripsi" id="deskripsi" style="height: 100px"></textarea>
+                          
+                        </div>
+                       
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4>Pedoman SPIP</h4>
+                      <p>
+                        SPIP merupakan sistem pengendalian yang 
+                        diselenggarakan secara menyeluruh di 
+                        lingkungan pemerintah pusat dan daerah. SPIP 
+                        dilaksanakan menyatu dan menjadi bagian 
+                        integral dari kegiatan instansi pemerintah. SPIP 
+                        bertujuan untuk memberikan keyakinan yang 
+                        memadai bagi tercapainya efektivitas dan 
+                        efisiensi pencapaian tujuan penyelenggaraan 
+                        pe-merintahan negara, keandalan pelaporan 
+                        keuangan, pengamanan aset, dan keta-atan 
+                        pada peraturan perundang-undangan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab">
+            <div class="container">
+              <div class="row">
+               
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4>Video Penjelasan SPIP</h4>
+                      <p>
+                        SPIP merupakan sistem pengendalian yang 
+                        diselenggarakan secara menyeluruh di 
+                        lingkungan pemerintah pusat dan daerah. SPIP 
+                        dilaksanakan menyatu dan menjadi bagian 
+                        integral dari kegiatan instansi pemerintah. SPIP 
+                        bertujuan untuk memberikan keyakinan yang 
+                        memadai bagi tercapainya efektivitas dan 
+                        efisiensi pencapaian tujuan penyelenggaraan 
+                        pe-merintahan negara, keandalan pelaporan 
+                        keuangan, pengamanan aset, dan keta-atan 
+                        pada peraturan perundang-undangan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 " >
+               
+                  <div class="ratio ratio-4x3">
+                    <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+                  </div>                    
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="assets/js/donut_chart.js"></script>
+    <script src="assets/js/line_chart.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.sidebarCollapseDefault').on('click', function () {
+          $('.sidebar').toggleClass('active');
+          $('.content').toggleClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>
