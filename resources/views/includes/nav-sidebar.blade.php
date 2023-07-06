@@ -35,25 +35,10 @@ data-bs-backdrop="false"
                     </a>
                 </li>
                 <li>
-                    <a href="#metodeMenu" data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle" class="item-menu ">
-                
-                        Master Metodologi SPIP
+                    <a href="{{ route('content-methodology') }}" class="item-menu" class="item-menu ">
+                        Metodologi SPIP
                     </a>
-                    <ul class="collapse list-unstyled" id="metodeMenu">
-                
-                        <li>
-                            <a href="{{ route('content-methodology') }}" class="item-menu">Master Metodologi</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('content-guide') }}" class="item-menu">Master Pedoman SPIP</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('content-other') }}" class="item-menu">Master Lain - lain</a>
-                        </li>
-                            
-                
-                        
-                    </ul>
+                    
                 </li>
                 <li>
                     <a href="#assesMenu " data-bs-toggle="collapse" aria-expanded="false" class="item-menu dropdown-toggle">
@@ -80,7 +65,7 @@ data-bs-backdrop="false"
                 </li>
                 
                 <li>
-                    <a href="#" class="item-menu ">
+                    <a href="{{ route('content-work-letter') }}" class="item-menu ">
                     
                         Surat Tugas 
                     </a>
@@ -124,7 +109,7 @@ data-bs-backdrop="false"
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="item-menu">
+                    <a href="{{ route('content-master-user') }}" class="item-menu">
                     
                         Master Data Pegawai
                     </a>

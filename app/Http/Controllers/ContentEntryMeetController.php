@@ -36,4 +36,24 @@ class ContentEntryMeetController extends Controller
 
         return redirect()->route('content-entry-meet');
     }
+
+    public function edit($id)
+    {
+        $meet = SpipEntryMeet::findOrFail($id);
+
+        return view('pages.edit-entry-meet',[
+            'meet' => $meet,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+        
+        $meet = SpipEntryMeet::findOrFail($id);
+
+        $meet->update($data);
+
+        return redirect()->route('content-entry-meet');
+    }
 }

@@ -14,7 +14,7 @@ class ContentGuideController extends Controller
     public function index()
     {
         $guides = SpipGuide::all();   
-        return view('pages.guide',[
+        return view('pages.tab.tab-guide',[
             'guides' => $guides
         ]);
     }

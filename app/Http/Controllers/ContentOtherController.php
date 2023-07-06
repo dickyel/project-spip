@@ -14,7 +14,7 @@ class ContentOtherController extends Controller
     public function index()
     {
         $others = SpipOther::all();   
-        return view('pages.other',[
+        return view('pages.tab.tab-other',[
             'others' => $others
         ]);
     }

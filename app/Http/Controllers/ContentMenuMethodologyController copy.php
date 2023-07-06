@@ -8,13 +8,13 @@ use App\Models\SpipOther;
 use App\Models\SpipGuide;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ContentMethodologyController extends Controller
+class ContentMenuMethodologyController extends Controller
 {
     //
     public function index()
     {
         $methods = SpipMethodology::all();   
-        return view('pages.tab.tab-method',[
+        return view('pages.menu-methodology',[
             'methods' => $methods
         ]);
     }

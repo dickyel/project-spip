@@ -16,14 +16,13 @@
 
         <button class="btn btn-primary" id="btnBuatForm btn btn-success" onclick="toggleForm()">Tambahkan Laporan</button>
    
-        <div class="container demo">
-            
-            <form id="myForm" class="hidden" action="{{ route('save-report') }}" enctype="multipart/form-data" method="post">
-                @csrf
-                <!-- Isi formulir di sini -->
-                <div class="row">
-                    <div class="card mt-2">
-                        <div class="card-body">
+        <form id="myForm" class="hidden" action="{{ route('save-report') }}" enctype="multipart/form-data" method="post">
+            @csrf
+            <!-- Isi formulir di sini -->
+            <div class="row">
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="col-md-12 col-md-6">
                             <div class="form-group ">
                                 <label for="document_title">Judul Laporan</label>
                                 <input class="form-control" type="text" id="document_title" name="document_title">
@@ -47,56 +46,76 @@
                                 <input class="form-control" type="file" id="document_file" name="document_file">
                             
                             </div>
-
-                            <button type="submit" class="btn btn-primary mt-2 ">Submit</button>
                         </div>
+                        
+
+                        <button type="submit" class="btn btn-primary mt-2 ">Submit</button>
                     </div>
-                </div>  
+                </div>
+            </div>  
+        </form>
+        <div class="col-md-6">
+            <form action="/report" class="form" Method="GET">
+                <div class="form-group mt-2 ">
+                    <input type="text" name="keyword" class="form-control w-75 d-inline" id="keyword" placeholder="Ketikkan keyword" value="{{ request('keyword') }}">
+                    <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                </div>
             </form>
         </div>
 
         <div class="container">
-            <div class="row">
-                
-                <div class="col-md-6">
-                    <form action="/report" class="form" Method="GET">
-                        <div class="form-group mt-2 ">
-                            <input type="text" name="keyword" class="form-control w-75 d-inline" id="keyword" placeholder="Ketikkan keyword" value="{{ request('keyword') }}">
-                            <button type="submit" class="btn btn-primary mb-1">Cari</button>
-                        </div>
-                    </form>
-                </div>
-                
-            </div>
             <div class="row mt-4">
                 @php $incrementReport = 0 @endphp
                 @if(!empty($reports) && $reports->count())
                     @foreach($reports as $report)
+                        
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-body">
+
                                     <div class="report-thumbnail">
                                         <img src="{{ 
                                             Storage::url($report->thumbnail) 
                                         }}" alt="" class="w-100">
                                     </div>
-                                    <div class="report-text">
-                                        <p class="report-text mt-3" style="font-weight:bold; font-size:16px;">
-                                            {{ $report->document_title }}
-                                        </p>
-                                        <p class="report-text " style="font-weight:bold; font-size:14px;">
-                                            {{ $report->created_date }}
-                                        </p>
-                                    </div>
-                                    <div class="text-center ">
-                                        <a href="" class="btn btn-success mt-2" >Download</a>
-                                        <a href="" class="btn btn-primary mt-2" > Preview</a>
-                                        <a href="" class="btn btn-danger mt-2" > Hapus</a>
+
+
+                                    <a href="{{ route('content-report.preview', ['id' => $report->id]) }}" style="text-decoration:none; color: #0E50A0;" >
+                                        <div class="report-text text-center">
+                                            <p class="report-text mt-3" style="font-weight:bold; font-size:16px;">
+                                                {{ $report->document_title }}
+                                            </p>
+                                            <p class="report-text " style="font-weight:bold; font-size:14px;">
+                                                {{ $report->created_date }}
+                                            </p>
+                                        </div>
+                                    </a>    
+                                   
+                                    <div class="text-center">
+                                        <a href="{{ route('edit-content-report', $report->id) }}" class="btn btn-primary mt-2" >
+                                            <img src="./assets/images/pen.svg" alt="" width="20px">
+                                        </a>
+                                        <span>
+                                            <a href="{{ route('content-report.delete', ['id' => $report->id]) }}" class="btn btn-danger mt-2" onclick="event.preventDefault(); document.getElementById('delete-form{{ $report->id }}').submit();"> 
+                                            <img src="./assets/images/trash.svg" alt="" width="20px">
+                                            </a>
+                                            <form id="delete-form{{ $report->id }}" action="{{ route('content-report.delete', ['id' => $report->id]) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
+                                        </span>
+                                        <span><a href="{{ route('content-report.download', ['id' => $report->id]) }}" class="btn btn-success mt-2" > 
+                                            <img src="./assets/images/download.svg" alt="" width="20px">
+                                        </a></span>
+
+                                        
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
+                    
+                        
                     @endforeach
                 @else
                     <div class="col-12 text-center py-5">

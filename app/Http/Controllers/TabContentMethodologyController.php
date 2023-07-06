@@ -14,7 +14,7 @@ class ContentMethodologyController extends Controller
     public function index()
     {
         $methods = SpipMethodology::all();   
-        return view('pages.tab.tab-method',[
+        return view('pages.methodology',[
             'methods' => $methods
         ]);
     }

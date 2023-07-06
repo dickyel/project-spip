@@ -10,7 +10,6 @@ class SpipGuide extends Model
     use HasFactory;
     protected $table = 'spip_guide';
     protected $fillable = [
-        'guide_title',
         'description'
     ];
 }
